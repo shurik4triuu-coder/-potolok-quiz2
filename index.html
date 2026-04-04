@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Натяжные потолки в Минске | МегаСтройФормат</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        html { scroll-behavior: smooth; }
+        .hero-bg {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('img/bg.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+
+    <!-- ШАПКА -->
+    <header class="bg-white shadow-sm fixed w-full z-50 top-0">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="font-bold text-xl text-blue-600 tracking-wider">Мега<span class="text-gray-800">Строй</span>Формат</div>
+            <nav class="flex items-center space-x-6">
+                <a href="#portfolio" class="text-gray-600 hover:text-blue-600 transition">Наши работы</a>
+                <a href="#calculator" class="bg-blue-600 text-white font-semibold py-2 px-4 rounded-lg hover:bg-blue-700 transition">Расчет цены</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ПЕРВЫЙ ЭКРАН -->
+    <section class="hero-bg h-screen flex items-center justify-center text-center mt-10 md:mt-0 px-4">
+        <div class="max-w-3xl">
+            <h1 class="text-4xl md:text-6xl font-extrabold text-white mb-6 leading-tight">
+                Натяжные потолки в Минске <br> <span class="text-blue-400">от МегаСтройФормат</span>
+            </h1>
+            <p class="text-lg md:text-xl text-gray-200 mb-8">
+                Никаких фейковых скидок. Прозрачный расчет, безопасное оборудование и монтаж на совесть.
+            </p>
+            <a href="#calculator" class="inline-block bg-blue-600 text-white font-bold text-lg py-4 px-8 rounded-full hover:bg-blue-700 transform hover:scale-105 transition shadow-lg">
+                Рассчитать точную стоимость
+            </a>
+        </div>
+    </section>
+
+    <!-- БЛОК С ФОТОГРАФИЯМИ РАБОТ -->
+    <section id="portfolio" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-4">Наши реальные работы в Минске</h2>
+            <p class="text-center text-gray-600 mb-16 max-w-2xl mx-auto">Мы не делаем "как у всех", мы делаем качественно. Оцените сами.</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- ФОТО 1 -->
+                <div class="group overflow-hidden rounded-2xl shadow-lg">
+                    <img src="img/work-1.jpg" alt="Матовый потолок со световыми линиями" class="w-full h-80 object-cover transform group-hover:scale-110 transition-transform duration-500">
+                    <div class="p-4 bg-white">
+                        <h3 class="font-bold text-lg">Световые линии в новостройке</h3>
+                        <p class="text-sm text-gray-600">Современный дизайн и основное освещение без люстры.</p>
+                    </div>
+                </div>
+                <!-- ФОТО 2 -->
+                <div class="group overflow-hidden rounded-2xl shadow-lg">
+                    <img src="img/work-2.jpg" alt="Глянцевый натяжной потолок" class="w-full h-80 object-cover transform group-hover:scale-110 transition-transform duration-500">
+                     <div class="p-4 bg-white">
+                        <h3 class="font-bold text-lg">Идеально гладкий глянец</h3>
+                        <p class="text-sm text-gray-600">Визуально увеличивает комнату и добавляет света.</p>
+                    </div>
+                </div>
+                <!-- ФОТО 3 -->
+                <div class="group overflow-hidden rounded-2xl shadow-lg">
+                    <img src="img/work-3.jpg" alt="Теневой натяжной потолок" class="w-full h-80 object-cover transform group-hover:scale-110 transition-transform duration-500">
+                     <div class="p-4 bg-white">
+                        <h3 class="font-bold text-lg">Теневой профиль</h3>
+                        <p class="text-sm text-gray-600">Эффект "парящего" потолка без вставок и плинтусов.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- БЛОК С КВИЗОМ -->
+    <section id="calculator" class="py-20 bg-gray-100">
+        <div class="max-w-4xl mx-auto px-4">
+            <div class="bg-white p-8 md:p-12 rounded-3xl shadow-xl">
+                <div class="text-center mb-10">
+                    <h2 class="text-3xl font-bold mb-4">Калькулятор стоимости</h2>
+                    <p class="text-gray-600">Ответьте на 3 вопроса и получите точный расчет без навязывания услуг.</p>
+                </div>
+                <form id="quizForm" class="space-y-6 max-w-lg mx-auto">
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-700 mb-2">Какой потолок планируете?</label>
+                        <select id="type" class="w-full p-4 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 outline-none transition text-gray-800">
+                            <option value="Матовый">Матовый (классика)</option>
+                            <option value="Глянцевый">Глянцевый</option>
+                            <option value="Сатиновый">Сатиновый</option>
+                            <option value="Парящий / Световые линии">Парящий / Световые линии</option>
+                            <option value="Другое / Нужна консультация" class="font-bold text-blue-600">Другое / Нужна консультация</option>
+                        </select>
+                    </div>
+                    <div class="flex gap-4">
+                        <div class="w-1/2">
+                            <label class="block text-sm font-semibold text-gray-700 mb-2">Площадь (м²)</label>
+                            <input type="number" id="area" min="1" placeholder="Например: 18" required class="w-full p-4 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 outline-none transition">
+                        </div>
+                        <div class="w-1/2">
+                            <label class="block text-sm font-semibold text-gray-700 mb-2">Комнат (шт)</label>
+                            <input type="number" id="rooms" min="1" value="1" placeholder="1" required class="w-full p-4 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 outline-none transition">
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-700 mb-2">Ваш номер телефона</label>
+                        <input type="tel" id="phone" value="+375" placeholder="+375 (XX) XXX-XX-XX" required class="w-full p-4 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 outline-none transition font-medium text-lg">
+                    </div>
+                    <button type="submit" class="w-full bg-blue-600 text-white font-bold py-5 px-6 rounded-xl hover:bg-blue-700 active:transform active:scale-95 transition-all shadow-lg text-lg mt-4">Получить честный расчет</button>
+                    <p class="text-xs text-center text-gray-400 mt-4">Нажимая кнопку, вы соглашаетесь на обработку данных. Это безопасно.</p>
+                </form>
+                <div id="successMessage" class="hidden mt-8 p-8 bg-green-50 text-green-800 rounded-2xl text-center border border-green-100 max-w-lg mx-auto">
+                    <svg class="w-16 h-16 text-green-500 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    <h3 class="font-bold text-2xl mb-2">Заявка успешно отправлена!</h3>
+                    <p class="text-gray-600">Мастер перезвонит вам в течение 10 минут, чтобы уточнить детали и назвать реальную стоимость.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ПОДВАЛ -->
+    <footer class="bg-gray-900 text-gray-400 py-10 text-sm text-center">
+        <div class="max-w-6xl mx-auto px-4">
+            <p class="text-white font-bold text-lg mb-2">МегаСтройФормат</p>
+            <p class="mb-2">Работаем ежедневно с 09:00 до 21:00</p>
+            <p class="mb-4">УНП 193744513</p>
+            <p>© 2024 Все права защищены.</p>
+        </div>
+    </footer>
+
+    <!-- JS ДЛЯ ОТПРАВКИ ФОРМЫ -->
+    <script>
+        document.getElementById('quizForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            const submitBtn = this.querySelector('button[type="submit"]');
+            const originalBtnText = submitBtn.innerText;
+            submitBtn.innerText = "Считаем и отправляем...";
+            submitBtn.disabled = true;
+            const data = {
+                type: document.getElementById('type').value,
+                area: document.getElementById('area').value,
+                rooms: document.getElementById('rooms').value,
+                phone: document.getElementById('phone').value
+            };
+            try {
+                const response = await fetch('http://127.0.0.1:8000/api/order', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(data)
+                });
+                if (response.ok) {
+                    document.getElementById('quizForm').classList.add('hidden');
+                    document.getElementById('successMessage').classList.remove('hidden');
+                } else {
+                    alert('Произошла ошибка. Пожалуйста, позвоните нам по телефону.');
+                    submitBtn.innerText = originalBtnText;
+                    submitBtn.disabled = false;
+                }
+            } catch (error) {
+                console.error('Ошибка:', error);
+                alert('Не удалось отправить заявку. Убедитесь, что сервер работает (черное окно открыто).');
+                submitBtn.innerText = originalBtnText;
+                submitBtn.disabled = false;
+            }
+        });
+    </script>
+</body>
+</html>

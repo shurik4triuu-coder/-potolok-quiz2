@@ -16,7 +16,7 @@ app.add_middleware(
 )
 
 # Показываем картинки из папки images
-app.mount("/images", StaticFiles(directory="images"), name="images")
+app.mount("/img", StaticFiles(directory="img"), name="img")
 
 # Показываем главную страницу
 @app.get("/")
